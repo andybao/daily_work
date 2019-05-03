@@ -1,0 +1,16 @@
+@Andys_RPi3:~ $ ps aux | grep python
+root       459  0.4  0.9  13660  9456 ?        S    15:17   0:00 python /chainVu/startup_supervisor.py
+root       613  1.0  1.4  22304 13880 ?        S    15:17   0:00 python /chainVu/log_AP_Info.py
+root       625  0.0  0.3   8248  3220 ?        S    15:17   0:00 sudo python /chainVu/blinkstick_driver.py
+root       630  0.0  0.3   8248  3348 ?        S    15:17   0:00 sudo -u pi python /chainVu/forward_to_server.py
+root       634  0.0  0.3   8248  3420 ?        S    15:17   0:00 sudo -u pi python /chainVu/demo_manager_client.py
+root       639  8.3  2.3  31136 22636 ?        S    15:17   0:02 python /chainVu/rfid_gate_process.py -g SA
+root       647  1.3  1.4  22172 13692 ?        S    15:17   0:00 python /chainVu/ap_main.py
+root       649  1.7  1.1  23320 11208 ?        Sl   15:17   0:00 python /chainVu/blinkstick_driver.py
+pi         652  9.2  2.3  30916 22556 ?        S    15:17   0:02 python /chainVu/forward_to_server.py
+root       655  2.0  1.4  21924 13780 ?        S    15:17   0:00 python /chainVu/stray_pallet.py
+pi         656  1.7  1.4  22592 14136 ?        S    15:17   0:00 python /chainVu/demo_manager_client.py
+root       660  1.3  1.4  21928 13884 ?        S    15:17   0:00 python /chainVu/center_of_gravity.py
+root       663  0.0  0.3   8248  3220 ?        S    15:17   0:00 sudo -u pi python /chainVu/cw_main.py
+pi         671  1.4  1.4  21900 13572 ?        S    15:17   0:00 python /chainVu/cw_main.py
+pi         764  0.0  0.0   4372   552 pts/0    S+   15:18   0:00 grep --color=auto pythonÎ
