@@ -2,6 +2,7 @@
 
 # Python Virtual Environment
 py37env/
+my_py*/
 sth.py
 
 # Byte-compiled / optimized / DLL files

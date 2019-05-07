@@ -12,21 +12,26 @@ def process_user_commands():
 
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         s.bind((HOST, PORT))
-        s.listen()
+        s.listen(10)
         conn, addr = s.accept()
         with conn:
             print('Connected by', addr)
-            while working_flag:
+            while True:
                 data = conn.recv(1024)
                 if not data:
+                    # conn.sendall(b'empty command')
                     break
                 syslog.syslog(syslog.LOG_CRIT, 'chainvu_test data: {0}'.format(data))
                 command = data.decode("utf-8")
                 if (command == 'led'):
                     led = blinkstick.find_first()
                     led.set_color(name = 'red')
-                    working_flag = False
-                    conn.sendall(b'Done')
+                    #working_flag = False
+                    #conn.sendall(b'done')
+                    #conn.sendto(b'done', addr)
+                else:
+                    working_flag = True
+                    # conn.sendall(b'invalid command')
 
 '''
         data = sock.recvfrom(1024)
