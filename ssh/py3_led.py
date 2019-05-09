@@ -1,9 +1,9 @@
 import os, subprocess
 
-cmd = 'type ./led.py | ssh pi@192.168.3.252 sudo python -'
-os.system(cmd)
+cmd = 'cat ./led.py | ssh pi@192.168.3.252 sudo python -'
+# os.system(cmd)
 
-# subprocess.Popen(cmd.split())
+subprocess.Popen(cmd, shell=True)
 
 '''
 HOST = 'pi@192.168.3.252'
