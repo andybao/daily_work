@@ -28,10 +28,10 @@ def process_coord_simulator_data():
     coord_forward_sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
     #Connect pallet and aim using demo_manager_client.py
-
+    '''
     command = "Pallet Association: "+palletID+" AimID: "+aim_id
     coord_forward_sock.sendto("<demomgr_msg msg_type=\"Server Command:\"><Command#>{0}</Command#></demomgr_msg>".format(command).encode(),(COORD_UDP_IP, 5559))
-
+    '''
 
     #announcement_msg
     '''
@@ -43,13 +43,13 @@ def process_coord_simulator_data():
 
     #temperature_msg
     #asset_id = "Test0{0:03}".format(1)
-    '''
+
     rssi_val = "3C"
     temp_val = "1190"
     temperature_message = ("5A5A01000C{0}{1}{2}55AA".format(nwk_addr,rssi_val,temp_val))
     bin_msg = binascii.unhexlify(temperature_message.encode())
     print ("sending {0}".format(bin_msg))
     coord_forward_sock.sendto(bin_msg, (COORD_UDP_IP, COORD_UPD_PORT))
-    '''
+
 if __name__ == "__main__":
    main(sys.argv[1:])
