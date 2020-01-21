@@ -5,8 +5,12 @@
 
 # Python Virtual Environment
 py37env/
+py3env/
 my_py*/
 sth.py
+
+# Mac Environment
+.DS_Store
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -9,6 +9,6 @@ class SerialWrapper:
         self.ser.write(data.encode())
 
 def main():
-    ser = SerialWrapper('/dev/tty.usbmodem0E22C8851')
+    ser = SerialWrapper('/dev/tty.usbmodemL11003001')
     data = 'a'
     ser.sendData(data)

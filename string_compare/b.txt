@@ -1,0 +1,1 @@
+%7B%22datatime%22%3A+%222019-09-11+16%3A25%3A23%22%2C+%22email%22%3A+%22%22%2C+%22aim_id%22%3A+%22f0f8f2d2bb40%22%2C+%22site_id%22%3A+%22fefc43c%22%2C+%22zone%22%3A+%22PR%22%2C+%22event_type%22%3A+1%2C+%22rssi%22%3A+%22100%22%2C+%22alert%22%3A+%22%22%2C+%22service_function%22%3A+%22log_aim_data%22%2C+%22value%22%3A+%2227.3125%22%7D
