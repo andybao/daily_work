@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    button#clear_db CLEAR_DB
+    h1 
+        <span id='data_length'>#{length}</span> record(s) in total
+    div#content-container
+        each data, index in data_array
+            p=index + ' ' + data.value + ' ' + data.timestamp
+
+    script(src="/javascripts/jquery-3.4.1.min.js")
+    script(src="/javascripts/main.js")
